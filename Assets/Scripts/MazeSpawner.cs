@@ -9,6 +9,9 @@ public class MazeSpawner : MonoBehaviour
 {
 
     public GameObject CellPrefab;
+  
+
+
 
     private void Start()
     { 
@@ -21,6 +24,7 @@ public class MazeSpawner : MonoBehaviour
             for (int y = 0; y < maze.GetLength(1); y++)
             {
                 Cell c = Instantiate(CellPrefab, new Vector3(x, y, -0.5f), Quaternion.identity).GetComponent<Cell>();
+                c.transform.parent = gameObject.transform;
                 c.wallLeft.SetActive(maze[x, y].wallLeft);
                 c.wallBottom.SetActive(maze[x, y].wallBottom);
             }

@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
+
 
 public class MazeGeneratorCell
 {
@@ -14,16 +17,32 @@ public class MazeGeneratorCell
 
 public class MazeGenerator
 {
+    public int Xcoord;
+    public int Ycoord;
     [SerializeField] public GameObject CellPrefab;
 
-    public int width = 15;
-    public int height = 15;
+    public int width = 20;
+    public int height = 20;
 
+  
    
     public MazeGeneratorCell[,] GenerateMaze()
     {
         MazeGeneratorCell[,] maze = new MazeGeneratorCell[width, height];
 
+
+        DeleteOuterWall(maze);//удаление внешних стен(право и верх, край)
+
+        RomoveWallWithBackTracker(maze);//создание лабиринта путем удаления внутренних стен
+
+      Exit(maze); //удаление стены, тем самым генерируя выход
+       
+
+        return maze;
+    }
+
+    public void DeleteOuterWall(MazeGeneratorCell[,] maze)
+    {
         for (int x = 0; x < maze.GetLength(0); x++)
         {
             for (int y = 0; y < maze.GetLength(1); y++)
@@ -39,15 +58,38 @@ public class MazeGenerator
 
         for (int y = 0; y < maze.GetLength(1); y++)
         {
-            maze[width-1,y].wallBottom = false;
+            maze[width - 1, y].wallBottom = false;
         }
-
-        RomoveWallWithBackTracker(maze);
-
-        return maze;
     }
 
-    private void RomoveWallWithBackTracker(MazeGeneratorCell[,] maze)
+    private void Exit(MazeGeneratorCell[,] maze)//генерация выхода
+    {
+
+        System.Random rnd = new System.Random();
+        float num = rnd.Next(0, 2);
+        int randomLeftOrBottom = (int)Math.Round(num, 0);
+      
+        
+
+
+        if (randomLeftOrBottom == 0)
+        {
+            float numRand = rnd.Next(0, height - 1);
+            int numRandInt = (int)Math.Round(numRand, 0);
+
+            maze[width - 1, numRandInt].wallLeft = false;
+        }
+        else
+        {
+            float numRand = rnd.Next(0, width - 1);
+            int numRandInt = (int)Math.Round(numRand, 0);
+
+            maze[numRandInt, height-1].wallBottom = false;
+        }
+      
+    }
+
+    private void RomoveWallWithBackTracker(MazeGeneratorCell[,] maze)//убирание лишних стен через стэк
     {
         MazeGeneratorCell current = maze[0, 0];
         current.Visited = true;
@@ -78,7 +120,7 @@ public class MazeGenerator
             }
             if(unvisitedNeiborhood.Count>0)
             {
-                MazeGeneratorCell choosen = unvisitedNeiborhood[Random.Range(0, unvisitedNeiborhood.Count)];
+                MazeGeneratorCell choosen = unvisitedNeiborhood[UnityEngine.Random.Range(0, unvisitedNeiborhood.Count)];
                 RemoveWall(current, choosen);
                 choosen.Visited = true;
                 stack.Push(choosen);
