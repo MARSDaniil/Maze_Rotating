@@ -8,7 +8,7 @@ public class RotateBoard : MonoBehaviour
 
     private bool clockwiseRotation = false;
     private bool counterclockwiseRotation = false;
-    [SerializeField] private float speedOfRotation = 5;
+    [SerializeField] private float speedOfRotation = 15;
     // Update is called once per frame
     void Update()
     {
