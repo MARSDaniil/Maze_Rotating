@@ -5,11 +5,11 @@ using UnityEngine;
 public class MoveCamera : MonoBehaviour
 {
     [SerializeField] GameObject Ball;
-    [SerializeField] Camera camera;
+    [SerializeField] Camera Camera;
 
     // Update is called once per frame
     void Update()
     {
-        camera.transform.position = new Vector3(Ball.transform.position.x, Ball.transform.position.y, -30f);
+        Camera.transform.position = new Vector3(Ball.transform.position.x, Ball.transform.position.y, -30f);
     }
 }
