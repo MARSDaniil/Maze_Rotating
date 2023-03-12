@@ -4,7 +4,6 @@ using UnityEngine;
 using System;
 
 
-
 public class MazeGeneratorCell
 {
     public int X;
@@ -21,10 +20,14 @@ public class MazeGenerator
     public int Ycoord;
     [SerializeField] public GameObject CellPrefab;
 
-    public int width = 10;
-    public int height = 10;
+    public int width;
+    public int height;
 
-  
+    public void SetParam(int size)
+    {
+        width = size;
+        height = size;
+    }
    
     public MazeGeneratorCell[,] GenerateMaze()
     {
@@ -35,7 +38,7 @@ public class MazeGenerator
 
         RomoveWallWithBackTracker(maze);//создание лабиринта путем удаления внутренних стен
 
-      Exit(maze); //удаление стены, тем самым генерируя выход
+        Exit(maze); //удаление стены, тем самым генерируя выход
        
 
         return maze;

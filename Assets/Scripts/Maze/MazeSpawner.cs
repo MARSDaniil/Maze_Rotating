@@ -9,7 +9,7 @@ public class MazeSpawner : MonoBehaviour
 {
 
     public GameObject CellPrefab;
-  
+    public int sizeOfMaze;
 
 
 
@@ -17,6 +17,7 @@ public class MazeSpawner : MonoBehaviour
     { 
 
         MazeGenerator generator = new MazeGenerator();
+        generator.SetParam(sizeOfMaze);
         MazeGeneratorCell[,] maze = generator.GenerateMaze();
 
         for (int x = 0; x < maze.GetLength(0); x++)
