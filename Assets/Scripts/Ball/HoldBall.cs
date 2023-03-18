@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class HoldBall : MonoBehaviour
 {
-    //[SerializeField] GameObject Sphere;
+    [SerializeField] float timeOfWait = 1f;
     public Rigidbody rb;
+
+    public bool canRotate = false;
+ //   [SerializeField] bool isOpen = true;
    
     // Start is called before the first frame update
     private float borderRight = -0.6f;
@@ -14,8 +17,10 @@ public class HoldBall : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        transform.position = new Vector3(0.2f, 0.5f, -0.5f);
-        StartCoroutine(WaitAndTurnOn(rb));
+        transform.position = new Vector3(0.2f, 0.5f, -0.5f);   
+       // StartCoroutine(WaitAndTurnOn());
+
+       
     }
 
     void Update()
@@ -26,12 +31,13 @@ public class HoldBall : MonoBehaviour
         }
     }
 
-   private IEnumerator WaitAndTurnOn(Rigidbody rb)
+   private IEnumerator WaitAndTurnOn()
     {
         rb.isKinematic = true;
-        //Debug.Log("u ender to coroinin");
-        new WaitForSeconds(1f);
+      //  Debug.Log("state of rb.isKinematic ==" + rb.isKinematic);
+        yield return new WaitForSeconds(timeOfWait);
         rb.isKinematic = false;
-        yield return null ;
+        //  Debug.Log("state of rb.isKinematic ==" + rb.isKinematic);
+        canRotate = true;
     }
 }

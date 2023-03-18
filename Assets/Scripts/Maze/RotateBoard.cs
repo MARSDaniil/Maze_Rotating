@@ -4,21 +4,39 @@ using UnityEngine;
 
 public class RotateBoard : MonoBehaviour
 {
-    [SerializeField] private GameObject Field;
+    [SerializeField]  GameObject Field;
 
-    [SerializeField] private float speedOfRotation = 15;
+    [SerializeField]  float speedOfRotation = 15;
+
+
+    [SerializeField] float timeOfWait = 5f;
     // Update is called once per frame
-    void Update()
+    private bool canRotate = false;
+
+    private void Start()
     {
-      
-        if (Input.GetAxis("Horizontal") != 0)
-        {
-            Rotate(Input.GetAxis("Horizontal"));
-        }
+        //        StartCoroutine(WaitAndTurnOn());
+        canRotate = true;
+    }
+
+    private IEnumerator WaitAndTurnOn()
+    {     
+        yield return new WaitForSeconds(timeOfWait);
+        canRotate = true;
+    }
+
+    void FixedUpdate()
+    {
+        
+            if (Input.GetAxis("Horizontal") != 0 && canRotate == true)
+            {
+                Rotate(Input.GetAxis("Horizontal"));
+            }
+
     }
 
     void Rotate(float ditectionOfRotate)//rotate plate
     {
-        Field.transform.Rotate(0, 0, -ditectionOfRotate * speedOfRotation * Time.deltaTime);
+        Field.transform.Rotate(0, 0, -ditectionOfRotate * speedOfRotation * Time.fixedDeltaTime);
     }
 }

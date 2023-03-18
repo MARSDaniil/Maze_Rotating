@@ -36,9 +36,9 @@ public class MazeGenerator
 
         DeleteOuterWall(maze);//удаление внешних стен(право и верх, край)
 
-        RomoveWallWithBackTracker(maze);//создание лабиринта путем удаления внутренних стен
+        //RomoveWallWithBackTracker(maze);//создание лабиринта путем удаления внутренних стен
 
-        Exit(maze); //удаление стены, тем самым генерируя выход
+//        Exit(maze); //удаление стены, тем самым генерируя выход
        
 
         return maze;
