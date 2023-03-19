@@ -6,10 +6,16 @@ public class InstanceBall : MonoBehaviour
 {
     [SerializeField] GameObject Ball;
     // Start is called before the first frame update
+    public GameObject Board;
+    
     void Start()
     {
-        Instantiate(Ball);
+      Board = GameObject.Find("Maze Spawner");
+      MazeSpawner mazeSpawner = Board.GetComponent<MazeSpawner>();
+
+     Ball.transform.position = new Vector3(-(mazeSpawner.sizeOfMaze) / 2 +1f, -(mazeSpawner.sizeOfMaze) / 2 +1f, -0.5f);
+
     }
 
-    
+  
 }

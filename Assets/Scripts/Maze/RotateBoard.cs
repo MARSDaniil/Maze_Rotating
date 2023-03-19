@@ -9,30 +9,39 @@ public class RotateBoard : MonoBehaviour
     [SerializeField]  float speedOfRotation = 15;
 
 
-    [SerializeField] float timeOfWait = 5f;
     // Update is called once per frame
-    private bool canRotate = false;
+    
 
     private void Start()
     {
-        //        StartCoroutine(WaitAndTurnOn());
-        canRotate = true;
+#if UNITY_IOS || UNITY_ANDROID
+        Input.gyro.enabled = true;
+#endif
+
     }
 
-    private IEnumerator WaitAndTurnOn()
-    {     
-        yield return new WaitForSeconds(timeOfWait);
-        canRotate = true;
-    }
+
 
     void FixedUpdate()
     {
-        
-            if (Input.GetAxis("Horizontal") != 0 && canRotate == true)
-            {
-                Rotate(Input.GetAxis("Horizontal"));
-            }
 
+#if UNITY_STANDALONE || UNITY_WEBGL
+        if (Input.GetAxis("Horizontal") != 0)
+        {
+            Rotate(Input.GetAxis("Horizontal"));
+        }
+#endif
+       
+#if UNITY_IOS || UNITY_ANDROID
+        /*
+         if (Input.gyro.attitude.eulerAngles.x != 0)
+         {
+             Debug.Log(Input.gyro.attitude);
+             Rotate(Input.gyro.attitude.eulerAngles.z);
+         }
+        */
+        Debug.Log(Input.gyro.attitude);
+#endif
     }
 
     void Rotate(float ditectionOfRotate)//rotate plate

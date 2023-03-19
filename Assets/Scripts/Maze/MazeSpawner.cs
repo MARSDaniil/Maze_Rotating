@@ -24,7 +24,7 @@ public class MazeSpawner : MonoBehaviour
         {
             for (int y = 0; y < maze.GetLength(1); y++)
             {
-                Cell c = Instantiate(CellPrefab, new Vector3(x- maze.GetLength(0)/2+1, y- maze.GetLength(1)/2+1, -0.5f), Quaternion.identity).GetComponent<Cell>();
+                Cell c = Instantiate(CellPrefab, new Vector3(x- maze.GetLength(0)/2+1, y- maze.GetLength(1)/2+0.5f, -0.5f), Quaternion.identity).GetComponent<Cell>();
                 c.transform.parent = gameObject.transform;
                 c.wallLeft.SetActive(maze[x, y].wallLeft);
                 c.wallBottom.SetActive(maze[x, y].wallBottom);
