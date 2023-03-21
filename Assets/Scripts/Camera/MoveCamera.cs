@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class MoveCamera : MonoBehaviour
 {
-    [SerializeField] GameObject Ball;
+
     [SerializeField] Camera Camera;
 
+    public GameObject Board;
+
+    public float rangeFactor = 1;
 
     // Update is called once per frame
-    void Update()
+    void Start()
     {
-        Camera.transform.position = new Vector3(Ball.transform.position.x, Ball.transform.position.y, -15f);
+        Board = GameObject.Find("Maze Spawner");
+        MazeSpawner mazeSpawner = Board.GetComponent<MazeSpawner>();
+
+        Camera.transform.position = new Vector3(0, 0, -mazeSpawner.sizeOfMaze* rangeFactor);
     }
 }
