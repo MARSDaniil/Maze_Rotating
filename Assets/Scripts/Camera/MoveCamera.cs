@@ -17,6 +17,6 @@ public class MoveCamera : MonoBehaviour
         Board = GameObject.Find("Maze Spawner");
         MazeSpawner mazeSpawner = Board.GetComponent<MazeSpawner>();
 
-        Camera.transform.position = new Vector3(0, 0, -mazeSpawner.sizeOfMaze* rangeFactor);
+        Camera.orthographicSize = Mathf.Sqrt(Mathf.Pow((mazeSpawner.sizeOfMaze - 1) / 2,2)  + Mathf.Pow((mazeSpawner.sizeOfMaze - 1) / 2, 2) )+ 1;
     }
 }
