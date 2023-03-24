@@ -19,6 +19,7 @@ public class RotateBoard : MonoBehaviour
 
         if (Application.isMobilePlatform == true)
         {
+            Debug.Log("Mobile");
             screenWidth = Screen.width;
         }
 #endif
@@ -68,11 +69,11 @@ public class RotateBoard : MonoBehaviour
             Vector2 position = touch.position;
             if (position.x > screenWidth / 2)
             {
-                Rotate(-1);
+                Rotate(1);
             }
             if (position.x < screenWidth / 2)
             {
-                Rotate(1);
+                Rotate(-1);
 
             }
             Debug.Log("touch position - " + position);
