@@ -9,6 +9,21 @@ public class Restart : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 0);
+       
+    }  
+    
+    public void NextLevel()
+    {
+      
+
+        if (SceneManager.sceneCountInBuildSettings-1 != SceneManager.GetActiveScene().buildIndex)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else
+        {
+            SceneManager.LoadScene("Menu");
+        }
     }
 
     public void GoToMenu()

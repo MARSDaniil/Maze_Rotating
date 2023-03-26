@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class Switcher : MonoBehaviour
 {
     public  GameObject buttonOn;
+    public  GameObject buttonOff;
 
 
     private void Start()
@@ -15,14 +16,23 @@ public class Switcher : MonoBehaviour
         }
     }
     public void TurnOff()
-    { 
-        gameObject.SetActive(false);
-        TurnOn();
+    {
+        if (buttonOff != null)
+        {
+            buttonOff.SetActive(false);
+        }
     }
 
-    private void TurnOn()
+    public void TurnOn()
     {
-        buttonOn.gameObject.SetActive(true);
+        if (buttonOn != null)
+        {
+            buttonOn.gameObject.SetActive(true);
+        }
+        else
+        {
+            Debug.LogError("buttonOn = 0");
+        }
     }
 
 }

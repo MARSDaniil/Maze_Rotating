@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2280249998201124338}
   - component: {fileID: 2280249998201124342}
   - component: {fileID: 7600052100051782065}
+  - component: {fileID: 1432142557677627821}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Player
@@ -129,3 +130,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Board: {fileID: 0}
   rb: {fileID: 2280249998201124342}
+  switcher: {fileID: 0}
+  isWin: 0
+--- !u!114 &1432142557677627821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2280249998201124337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0e2781306f9f3841854c3cf159dc6b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonOn: {fileID: 0}
+  buttonOff: {fileID: 0}

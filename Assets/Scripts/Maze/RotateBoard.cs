@@ -8,13 +8,19 @@ public class RotateBoard : MonoBehaviour
 
     [SerializeField]  float speedOfRotation = 15;
 
-    private float screenHeight;
+    [SerializeField] GameObject Ball;
+
+    [SerializeField] GameOver gameOver;
+
     private float screenWidth;
     // Update is called once per frame
 
 
     private void Start()
     {
+        Ball = GameObject.Find("Sphere");
+        gameOver = Ball.GetComponent<GameOver>();
+
 #if UNITY_STANDALONE || UNITY_WEBGL
 
         if (Application.isMobilePlatform == true)
@@ -58,7 +64,10 @@ public class RotateBoard : MonoBehaviour
 
     void Rotate(float ditectionOfRotate)//rotate plate
     {
-        Field.transform.Rotate(0, 0, -ditectionOfRotate * speedOfRotation * Time.fixedDeltaTime);
+        if (gameOver.isWin == false)
+        {
+            Field.transform.Rotate(0, 0, -ditectionOfRotate * speedOfRotation * Time.fixedDeltaTime);
+        }
     }
 
     private void isTouch()
@@ -76,7 +85,7 @@ public class RotateBoard : MonoBehaviour
                 Rotate(-1);
 
             }
-            Debug.Log("touch position - " + position);
+  //          Debug.Log("touch position - " + position);
         }
     }
 }
