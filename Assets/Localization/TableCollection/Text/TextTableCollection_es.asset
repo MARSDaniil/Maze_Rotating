@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TextTableCollection_es
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es
+  m_SharedData: {fileID: 11400000, guid: 0998fff810c6cab41881107000178ebf, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 7175651328
+    m_Localized: Maze Rotation es un juego hipercasual en el que el objetivo es encontrar
+      una salida del laberinto para encontrar la bola roja. Para hacer esto, debe
+      inclinar el laberinto hacia la derecha o hacia la izquierda, de modo que, bajo
+      la influencia de la gravedad, la bola se mueva dentro del laberinto.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1377270218752
+    m_Localized: "Para controlar la rotaci\xF3n del laberinto, debe usar las teclas
+      W y D si est\xE1 usando una computadora. O bien, al jugar desde un dispositivo
+      m\xF3vil, debe presionar hacia el lado derecho o izquierdo de la pantalla."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 586731995136
+    m_Localized: El autor Daniil MARS agradece a Valerya, Artem, Nikolai, Ekaterina,
+      Vyacheslav por su ayuda y apoyo moral.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

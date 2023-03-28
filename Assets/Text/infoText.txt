@@ -1,0 +1,14 @@
+Maze Rotation is a hyper-casual game where the goal is to find a way out of the maze for the red ball. To do this, you need to tilt the maze to the right or left, so that under the influence of gravity the ball moves inside the maze.
+
+In controlling the rotation of the maze, you should use either the W and D keys if you are using a computer. Or, when playing from a mobile device - you should push to the right or left side of the screen.
+
+The author Daniil MARS thanks Valerya, Artem, Nikolai, Ekaterina, Vyacheslav for their help and moral support.
+
+
+
+
+Мэйз ротатион - гиперказуальная игра, целью которой является найти выход из лабиринта для красного шарика .  Для этого вам нужно наклонять лабиринт вправо или влево, так, чтобы под действием гравитации шарик перемещался внутри лабиринта.
+
+В управлении поворота лабиринта вам следует использовать либо клавиши W и D, если вы используете компьютер. Либо, при игре с мобильного устройства - вам следует пуш на правую или левую сторону экрана. 
+
+Автор Даниил МАРС благодарит за помощь и моральную поддержку Валерию, Артема, Николая, Екатерину, Вячеслава.

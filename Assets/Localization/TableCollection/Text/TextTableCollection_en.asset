@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: TextTableCollection_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 0998fff810c6cab41881107000178ebf, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 7175651328
+    m_Localized: Maze Rotation is a hyper-casual game where the goal is to find a
+      way out of the maze for the red ball. To do this, you need to tilt the maze
+      to the right or left, so that under the influence of gravity the ball moves
+      inside the maze.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1377270218752
+    m_Localized: In controlling the rotation of the maze, you should use either the
+      W and D keys if you are using a computer. Or, when playing from a mobile device
+      - you should push to the right or left side of the screen.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 586731995136
+    m_Localized: The author Daniil MARS thanks Valerya, Artem, Nikolai, Ekaterina,
+      Vyacheslav for their help and moral support.
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
