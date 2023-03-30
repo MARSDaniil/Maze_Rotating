@@ -45,7 +45,7 @@ MonoBehaviour:
   - m_Id: 16256496549888
     m_Localized: 'level menu
 
-      (ill build it at next time)'
+'
     m_Metadata:
       m_Items: []
   - m_Id: 18549216362496
@@ -64,6 +64,14 @@ MonoBehaviour:
   - m_Id: 309653388115968
     m_Localized: touch the right and left sides of the screen to rotate the maze
       and find the way out of it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 396620167626752
+    m_Localized: Strange Level
+    m_Metadata:
+      m_Items: []
+  - m_Id: 396611548332032
+    m_Localized: common levels
     m_Metadata:
       m_Items: []
   references:

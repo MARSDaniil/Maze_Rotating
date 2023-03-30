@@ -39,7 +39,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 16256496549888
-    m_Localized: "men\xFA de nivel\n(Lo construir\xE9 en la pr\xF3xima vez)"
+    m_Localized: "men\xFA de nivel\n"
     m_Metadata:
       m_Items: []
   - m_Id: 18549216362496
@@ -58,6 +58,14 @@ MonoBehaviour:
   - m_Id: 309653388115968
     m_Localized: toca los lados derecho e izquierdo de la pantalla para girar el
       laberinto y encontrar la salida.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 396611548332032
+    m_Localized: niveles comunes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 396620167626752
+    m_Localized: "Niveles extra\xF1os"
     m_Metadata:
       m_Items: []
   references:

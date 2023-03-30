@@ -2282,6 +2282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere
       objectReference: {fileID: 0}
+    - target: {fileID: 2280249998201124337, guid: f13b9be9637f9834ca57ff031ba8d9c2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2280249998201124341, guid: f13b9be9637f9834ca57ff031ba8d9c2, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -2955,7 +2959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CellPrefab: {fileID: 6079812486732056423, guid: eaf8728272f1b424392a6700632483a0, type: 3}
-  sizeOfMaze: 20
+  sizeOfMaze: 10
 --- !u!4 &1795652387
 Transform:
   m_ObjectHideFlags: 0
