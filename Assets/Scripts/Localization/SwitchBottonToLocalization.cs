@@ -12,7 +12,12 @@ public class SwitchBottonToLocalization : MonoBehaviour
     void Start()
     {
         int startNumOfLocale = LocalizationSettings.SelectedLocale.SortOrder;
+        if(LocalizationSettings.SelectedLocale == null)
+        {
+            startNumOfLocale = 0;
+        }
 
+     //   Debug.Log("LocalizationSettings.SelectedLocale" + LocalizationSettings.SelectedLocale);
 switch(startNumOfLocale)
         {
             case 0:

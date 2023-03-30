@@ -49,6 +49,10 @@ MonoBehaviour:
     m_Localized: NIVEAU COMPLET
     m_Metadata:
       m_Items: []
+  - m_Id: 259703715381248
+    m_Localized: "param\xE8tres"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

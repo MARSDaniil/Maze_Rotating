@@ -46,6 +46,10 @@ MonoBehaviour:
     m_Localized: NIVEL COMPLETADO
     m_Metadata:
       m_Items: []
+  - m_Id: 259703715381248
+    m_Localized: ajustes
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

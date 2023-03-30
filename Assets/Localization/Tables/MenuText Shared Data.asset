@@ -35,6 +35,10 @@ MonoBehaviour:
     m_Key: LevelComplete
     m_Metadata:
       m_Items: []
+  - m_Id: 259703715381248
+    m_Key: Setting
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

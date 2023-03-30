@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public GameObject Board;
@@ -35,10 +35,19 @@ public class GameOver : MonoBehaviour
                 isWin = true;
              //   Debug.Log("U win");
                 rb.isKinematic = true;
+                OpenNewSceneInMenu();
             }
         }
     }
 
+    private void OpenNewSceneInMenu()
+    {
+       int nextSceneIndex = SceneManager.GetActiveScene().buildIndex+1;
+        if(nextSceneIndex > PlayerPrefs.GetInt("levelAt"))
+        {
+            PlayerPrefs.SetInt("levelAt", nextSceneIndex);
+        }
+    }
   
 
 }
