@@ -50,6 +50,16 @@ MonoBehaviour:
     m_Localized: ajustes
     m_Metadata:
       m_Items: []
+  - m_Id: 309565030907904
+    m_Localized: "Usa A y D (o \u2190 y \u2192) para girar el laberinto y encontrar
+      la salida."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309653388115968
+    m_Localized: toca los lados derecho e izquierdo de la pantalla para girar el
+      laberinto y encontrar la salida.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -53,6 +53,16 @@ MonoBehaviour:
     m_Localized: "param\xE8tres"
     m_Metadata:
       m_Items: []
+  - m_Id: 309565030907904
+    m_Localized: "Utilisez A et D (ou \u2190 et \u2192) pour faire pivoter le labyrinthe
+      et trouver le moyen d'en sortir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309653388115968
+    m_Localized: "touchez les c\xF4t\xE9s droit et gauche de l'\xE9cran pour faire
+      pivoter le labyrinthe et trouver le moyen d'en sortir."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

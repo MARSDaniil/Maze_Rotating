@@ -2955,7 +2955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CellPrefab: {fileID: 6079812486732056423, guid: eaf8728272f1b424392a6700632483a0, type: 3}
-  sizeOfMaze: 9
+  sizeOfMaze: 16
 --- !u!4 &1795652387
 Transform:
   m_ObjectHideFlags: 0

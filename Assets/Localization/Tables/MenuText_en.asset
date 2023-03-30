@@ -56,6 +56,16 @@ MonoBehaviour:
     m_Localized: settings
     m_Metadata:
       m_Items: []
+  - m_Id: 309565030907904
+    m_Localized: "Use A and D (or \u2190 and \u2192) to rotate the maze and find
+      the way out of it."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 309653388115968
+    m_Localized: touch the right and left sides of the screen to rotate the maze
+      and find the way out of it.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
