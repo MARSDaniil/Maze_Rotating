@@ -71,6 +71,18 @@ MonoBehaviour:
     m_Localized: "Niveaux \xE9tranges"
     m_Metadata:
       m_Items: []
+  - m_Id: 999471923314688
+    m_Localized: "Souhaitez-vous noter le jeu\_?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 999911528316928
+    m_Localized: Oui
+    m_Metadata:
+      m_Items: []
+  - m_Id: 999933418389504
+    m_Localized: Non
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -55,6 +55,18 @@ MonoBehaviour:
     m_Key: Strange Level
     m_Metadata:
       m_Items: []
+  - m_Id: 999471923314688
+    m_Key: RateGame
+    m_Metadata:
+      m_Items: []
+  - m_Id: 999911528316928
+    m_Key: Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 999933418389504
+    m_Key: No
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

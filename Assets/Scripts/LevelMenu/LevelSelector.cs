@@ -10,6 +10,13 @@ public class LevelSelector : MonoBehaviour
     void Start()
     {
         int levelAt = PlayerPrefs.GetInt("levelAt", 2);
+        //clear open levels
+        /*
+        for (int i = 1; i < levelBottonArray.Length; i++)
+        {
+            levelBottonArray[i].interactable = false;
+        }
+        */
         for (int i = 0; i < levelBottonArray.Length; i++)
         {
             if(i+2>levelAt)

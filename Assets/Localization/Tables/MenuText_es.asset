@@ -68,6 +68,18 @@ MonoBehaviour:
     m_Localized: "Niveles extra\xF1os"
     m_Metadata:
       m_Items: []
+  - m_Id: 999471923314688
+    m_Localized: "\xBFTe gustar\xEDa calificar el juego?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 999911528316928
+    m_Localized: "S\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 999933418389504
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -2347,6 +2347,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7600052100051782065, guid: f13b9be9637f9834ca57ff031ba8d9c2, type: 3}
+      propertyPath: isStrangeLevel
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2280249998201124343, guid: f13b9be9637f9834ca57ff031ba8d9c2, type: 3}
     m_AddedGameObjects: []
@@ -2976,7 +2980,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CellPrefab: {fileID: 6079812486732056423, guid: eaf8728272f1b424392a6700632483a0, type: 3}
-  sizeOfMaze: 5
+  sizeOfMaze: 10
 --- !u!4 &1795652387
 Transform:
   m_ObjectHideFlags: 0

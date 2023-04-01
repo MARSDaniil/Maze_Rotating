@@ -13,6 +13,7 @@ public class GameOver : MonoBehaviour
 
 
     public bool isWin = false;
+    public bool isStrangeLevel = false;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -35,7 +36,12 @@ public class GameOver : MonoBehaviour
                 isWin = true;
              //   Debug.Log("U win");
                 rb.isKinematic = true;
-                OpenNewSceneInMenu();
+                if (isStrangeLevel == false)
+                {
+
+                    OpenNewSceneInMenu();
+                }
+
             }
         }
     }

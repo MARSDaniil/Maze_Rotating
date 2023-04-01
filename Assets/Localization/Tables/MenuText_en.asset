@@ -74,6 +74,18 @@ MonoBehaviour:
     m_Localized: common levels
     m_Metadata:
       m_Items: []
+  - m_Id: 999471923314688
+    m_Localized: Would you like to rate the game?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 999933418389504
+    m_Localized: No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 999911528316928
+    m_Localized: Yes
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
