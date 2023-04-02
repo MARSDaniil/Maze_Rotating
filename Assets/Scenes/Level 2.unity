@@ -3201,7 +3201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Board: {fileID: 0}
   color: []
-  CoeffOfScale: 4
+  CoeffOfScale: 5
 --- !u!222 &1967577144
 CanvasRenderer:
   m_ObjectHideFlags: 0

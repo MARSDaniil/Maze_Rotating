@@ -33,10 +33,12 @@ public class GameOver : MonoBehaviour
 
             if (gameObject.transform.position.y < (-Mathf.Sqrt(Mathf.Pow((mazeSpawner.sizeOfMaze - 1) / 2, 2) + Mathf.Pow((mazeSpawner.sizeOfMaze - 1) / 2, 2)) - 5))
             {
+             
                 isWin = true;
+                CountGame();
              //   Debug.Log("U win");
                 rb.isKinematic = true;
-                if (isStrangeLevel == false)
+                if (isStrangeLevel == false)//отсечение странных уровней от привязи к открытым уровням
                 {
 
                     OpenNewSceneInMenu();
@@ -48,12 +50,28 @@ public class GameOver : MonoBehaviour
 
     private void OpenNewSceneInMenu()
     {
-       int nextSceneIndex = SceneManager.GetActiveScene().buildIndex+1;
+       
+        int nextSceneIndex = SceneManager.GetActiveScene().buildIndex+1;
         if(nextSceneIndex > PlayerPrefs.GetInt("levelAt"))
         {
             PlayerPrefs.SetInt("levelAt", nextSceneIndex);
+            SaveToCloudLevel(nextSceneIndex);
+        }
+
+    }
+
+    private void SaveToCloudLevel(int nextSceneIndex)
+    {
+        if (nextSceneIndex > Progress.Instance.PlayerInfo.Level)
+        {
+            Progress.Instance.PlayerInfo.Level = nextSceneIndex;
+            Progress.Instance.Save();
         }
     }
-  
 
+    private void CountGame()
+    {
+        Progress.Instance.PlayerInfo.GamePlayed++;
+        Progress.Instance.Save();
+    }
 }

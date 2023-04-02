@@ -21,4 +21,19 @@ mergeInto(LibraryManager.library, {
   },
 
 
+SaveExtern: function (date) {
+   var dataString = UTF8ToString(date);
+   var myobj = JSON.parse(dataString);
+   player.setData(myobj);
+  },
+
+LoadExtern: function () {
+   player.getData().then(_date => {
+    const myJSON = JSON.stringify(_date);
+    myGameInstance.SendMessege('Progress','SetPlayerInfo',myJSON);
+   })
+
+  },
+
+
 });
