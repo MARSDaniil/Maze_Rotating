@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using YG;
 public class GameOver : MonoBehaviour
 {
     public GameObject Board;
@@ -35,7 +36,7 @@ public class GameOver : MonoBehaviour
             {
              
                 isWin = true;
-                CountGame();
+        //        CountGame();
              //   Debug.Log("U win");
                 rb.isKinematic = true;
                 if (isStrangeLevel == false)//отсечение странных уровней от привязи к открытым уровням
@@ -54,12 +55,17 @@ public class GameOver : MonoBehaviour
         int nextSceneIndex = SceneManager.GetActiveScene().buildIndex+1;
         if(nextSceneIndex > PlayerPrefs.GetInt("levelAt"))
         {
+            YandexGame.savesData.maxLevelOpen = nextSceneIndex;
+            YandexGame.SaveProgress();
+            
             PlayerPrefs.SetInt("levelAt", nextSceneIndex);
-            SaveToCloudLevel(nextSceneIndex);
+            //       SaveToCloudLevel(nextSceneIndex);
         }
 
     }
 
+
+    /*
     private void SaveToCloudLevel(int nextSceneIndex)
     {
         if (nextSceneIndex > Progress.Instance.PlayerInfo.Level)
@@ -74,4 +80,6 @@ public class GameOver : MonoBehaviour
         Progress.Instance.PlayerInfo.GamePlayed++;
         Progress.Instance.Save();
     }
+    */
+
 }

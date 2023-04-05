@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
+using YG;
 public class SwitchBottonToLocalization : MonoBehaviour
 {
     public GameObject EnBotton;
@@ -9,16 +10,17 @@ public class SwitchBottonToLocalization : MonoBehaviour
     public GameObject EsBotton;
     public GameObject FrBotton;
 
-    void Start()
+    void Awake()
     {
-        int startNumOfLocale = LocalizationSettings.SelectedLocale.SortOrder;
+        YandexGame.savesData.selectedLanguage = LocalizationSettings.SelectedLocale.SortOrder;
         if(LocalizationSettings.SelectedLocale == null)
         {
-            startNumOfLocale = 0;
+            YandexGame.savesData.selectedLanguage = 0;
+            YandexGame.SaveProgress();
         }
 
-     //   Debug.Log("LocalizationSettings.SelectedLocale" + LocalizationSettings.SelectedLocale);
-switch(startNumOfLocale)
+        //   Debug.Log("LocalizationSettings.SelectedLocale" + LocalizationSettings.SelectedLocale);
+        switch (YandexGame.savesData.selectedLanguage)
         {
             case 0:
                 EnBotton.SetActive(true);
@@ -37,10 +39,5 @@ switch(startNumOfLocale)
 
     }
 
-    IEnumerator WaitTime()
-    {
-
-        yield return new WaitForSeconds(4);
-    }
 
 }
