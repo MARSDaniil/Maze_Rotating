@@ -25,12 +25,12 @@ public class BackGround : MonoBehaviour
         float evenShift;
         if ((mazeSpawner.sizeOfMaze - 1) % 2 == 0)
         {
-            evenShift = 0.5f;
+            evenShift = -0.5f;
         }
         else
             evenShift = 0;
         gameObject.transform.localScale = new Vector3((mazeSpawner.sizeOfMaze - 1) * CoeffOfScale, (mazeSpawner.sizeOfMaze - 1) * CoeffOfScale, 0.01f);
-        gameObject.transform.localPosition = new Vector3(evenShift, evenShift, 0);
+        gameObject.transform.localPosition = new Vector3(evenShift, 0, 0);
     }
 
     private void Colour()
