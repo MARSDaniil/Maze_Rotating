@@ -1423,6 +1423,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1503,7 +1504,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3efe7b11e0b776f49baa92728c176471, type: 3}
   m_Name: 
@@ -1511,6 +1512,28 @@ MonoBehaviour:
   Camera: {fileID: 963194227}
   Board: {fileID: 0}
   rangeFactor: 1.25
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b20d4da95d791244d95ed6474cd4d0fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Camera: {fileID: 963194227}
+  Board: {fileID: 0}
+  Ball: {fileID: 104535876}
+  rangeFactor: 1
+  boardOfInsideSquare: 0
+  diamondAngle: 0
+  leftLimit: 0
+  rightLimit: 0
+  bottomLimit: 0
+  upperLimit: 0
 --- !u!1 &965889109
 GameObject:
   m_ObjectHideFlags: 0
@@ -2977,7 +3000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CellPrefab: {fileID: 6079812486732056423, guid: eaf8728272f1b424392a6700632483a0, type: 3}
-  sizeOfMaze: 10
+  sizeOfMaze: 15
 --- !u!4 &1795652387
 Transform:
   m_ObjectHideFlags: 0

@@ -10,15 +10,11 @@ public class SwitchBottonToLocalization : MonoBehaviour
     public GameObject EsBotton;
     public GameObject FrBotton;
 
-    void Awake()
+    void Update()
     {
-        YandexGame.savesData.selectedLanguage = LocalizationSettings.SelectedLocale.SortOrder;
-        if(LocalizationSettings.SelectedLocale == null)
-        {
-            YandexGame.savesData.selectedLanguage = 0;
-            YandexGame.SaveProgress();
-        }
-
+        //YandexGame.savesData.selectedLanguage = LocalizationSettings.SelectedLocale.SortOrder;
+        
+        /*
         //   Debug.Log("LocalizationSettings.SelectedLocale" + LocalizationSettings.SelectedLocale);
         switch (YandexGame.savesData.selectedLanguage)
         {
@@ -35,7 +31,38 @@ public class SwitchBottonToLocalization : MonoBehaviour
                 FrBotton.SetActive(true);
                 break;
         }
+        */
 
+        if(YandexGame.EnvironmentData.language == "ru")
+        {
+            RuBotton.SetActive(true);
+            LocalizationSettings.SelectedLocale.SortOrder = 1;
+            YandexGame.savesData.selectedLanguage = 1;
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1];
+        }
+        else if(YandexGame.EnvironmentData.language == "es")
+        {
+            EsBotton.SetActive(true);
+            LocalizationSettings.SelectedLocale.SortOrder = 2;
+            YandexGame.savesData.selectedLanguage = 2;
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[2];
+        }
+        else if (YandexGame.EnvironmentData.language == "fr")
+        {
+            FrBotton.SetActive(true);
+            YandexGame.savesData.selectedLanguage = 3;
+            LocalizationSettings.SelectedLocale.SortOrder = 3;
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[3];
+        }
+        else
+        {
+            EnBotton.SetActive(true);
+            YandexGame.savesData.selectedLanguage = 0;
+            LocalizationSettings.SelectedLocale.SortOrder = 0;
+            LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[0];
+        }
+
+        YandexGame.SaveProgress();
 
     }
 

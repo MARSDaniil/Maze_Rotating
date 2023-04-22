@@ -19,7 +19,7 @@ MonoBehaviour:
   flush: 0
   saveCloudInterval: 5
   AdWhenLoadingScene: 0
-  fullscreenAdInterval: 60
+  fullscreenAdInterval: 5
   durationOfAdSimulation: 0.5
   LocalizationEnable: 1
   callingLanguageCheck: 0
