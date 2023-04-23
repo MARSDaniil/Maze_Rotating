@@ -215,3 +215,4 @@ MonoBehaviour:
   speedOfRotation: 30
   Ball: {fileID: 0}
   gameOver: {fileID: 0}
+  timeOfWait: 0.1

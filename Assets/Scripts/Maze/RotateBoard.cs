@@ -15,11 +15,17 @@ public class RotateBoard : MonoBehaviour
     private float screenWidth;
     // Update is called once per frame
 
+    private bool firstTouch = false;
 
+    [SerializeField]
+    float timeOfWait;
     private void Start()
     {
         Ball = GameObject.Find("Sphere");
         gameOver = Ball.GetComponent<GameOver>();
+
+        StartCoroutine(Co_WaitForSeconds(timeOfWait));
+
 
 #if UNITY_STANDALONE || UNITY_WEBGL
 
@@ -35,13 +41,24 @@ public class RotateBoard : MonoBehaviour
         Debug.Log("Screen Width : " + Screen.width);
 #endif
 
+
+
     }
 
 
 
     void FixedUpdate()
     {
-
+        /*
+        if(firstTouch == false)
+        {
+            float speed = speedOfRotation;
+            speedOfRotation = 0;
+            StartCoroutine(Co_WaitForSeconds(0.1f));
+            firstTouch = true;
+            speedOfRotation = speed;
+        }
+        */
 #if UNITY_STANDALONE || UNITY_WEBGL
 
         if (Application.isMobilePlatform == true)
@@ -87,5 +104,19 @@ public class RotateBoard : MonoBehaviour
             }
   //          Debug.Log("touch position - " + position);
         }
+    }
+
+
+    private IEnumerator Co_WaitForSeconds(float value)
+    {
+        float speed = speedOfRotation;
+        speedOfRotation = 0; 
+        Debug.Log("Start of waiting");
+        // Do something before
+        yield return new WaitForSeconds(value);
+        // Do something after
+        speedOfRotation = speed;
+        Debug.Log("Finish of wauting");
+        firstTouch = true;
     }
 }
