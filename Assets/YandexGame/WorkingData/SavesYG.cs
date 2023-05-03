@@ -33,6 +33,7 @@ namespace YG
 
             maxLevelOpen = 0;
             isMusicOn = true;
+             
 
         }
     }

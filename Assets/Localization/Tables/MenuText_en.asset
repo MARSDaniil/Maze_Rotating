@@ -16,7 +16,8 @@ MonoBehaviour:
     m_Code: en
   m_SharedData: {fileID: 11400000, guid: 3b2c37b24a43fbd49b248d2f3526016d, type: 2}
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 5872687401890217987
   m_TableData:
   - m_Id: 14117224448
     m_Localized: 'Maze Rotation is a hyper-casual game where the goal is to find
@@ -55,10 +56,10 @@ MonoBehaviour:
   - m_Id: 259703715381248
     m_Localized: settings
     m_Metadata:
-      m_Items: []
+      m_Items:
+      - rid: 5872687401890217987
   - m_Id: 309565030907904
-    m_Localized: "Use A and D (or \u2190 and \u2192) to rotate the maze and find
-      the way out of it."
+    m_Localized: Use A and D to rotate the maze and find the way out of it.
     m_Metadata:
       m_Items: []
   - m_Id: 309653388115968
@@ -92,4 +93,8 @@ MonoBehaviour:
       m_Items: []
   references:
     version: 2
-    RefIds: []
+    RefIds:
+    - rid: 5872687401890217987
+      type: {class: SmartFormatTag, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries: 00c0b3fb32ec0000

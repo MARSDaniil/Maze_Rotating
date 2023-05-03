@@ -51,8 +51,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 309565030907904
-    m_Localized: "Usa A y D (o \u2190 y \u2192) para girar el laberinto y encontrar
-      la salida."
+    m_Localized: Usa A y D para girar el laberinto y encontrar la salida.
     m_Metadata:
       m_Items: []
   - m_Id: 309653388115968

@@ -134,8 +134,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: touch the right and left sides of the screen to rotate the maze and find
-    the way out of it.
+  m_Text: 
 --- !u!114 &6700677940062544811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,8 +292,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Use A and D (or \u2190 and \u2192) to rotate the maze and find the way
-    out of it."
+  m_Text: 
 --- !u!114 &6700677940327731782
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -54,8 +54,8 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 309565030907904
-    m_Localized: "Utilisez A et D (ou \u2190 et \u2192) pour faire pivoter le labyrinthe
-      et trouver le moyen d'en sortir."
+    m_Localized: Utilisez A et D pour faire pivoter le labyrinthe et trouver le moyen
+      d'en sortir.
     m_Metadata:
       m_Items: []
   - m_Id: 309653388115968

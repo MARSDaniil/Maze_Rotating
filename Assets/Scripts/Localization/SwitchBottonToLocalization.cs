@@ -9,7 +9,8 @@ public class SwitchBottonToLocalization : MonoBehaviour
     public GameObject RuBotton;
     public GameObject EsBotton;
     public GameObject FrBotton;
-
+     
+    private bool isLanguageSelected = false;
     void Start()
     {
         //YandexGame.savesData.selectedLanguage = LocalizationSettings.SelectedLocale.SortOrder;
@@ -33,28 +34,40 @@ public class SwitchBottonToLocalization : MonoBehaviour
         }
         */
 
-        if(YandexGame.EnvironmentData.language == "ru")
+
+        
+        while(YandexGame.SDKEnabled != true)
+
+        if(YandexGame.EnvironmentData.language == "ru" ||
+            YandexGame.EnvironmentData.language == "be" ||
+            YandexGame.EnvironmentData.language == "kk" ||
+            YandexGame.EnvironmentData.language == "kz" ||
+            YandexGame.EnvironmentData.language == "uz"
+            )
         {
             RuBotton.SetActive(true);
             LocalizationSettings.SelectedLocale.SortOrder = 1;
             YandexGame.savesData.selectedLanguage = 1;
             LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[1];
+            isLanguageSelected = true;
         }
-        else if(YandexGame.EnvironmentData.language == "es")
+        if(YandexGame.EnvironmentData.language == "es")
         {
             EsBotton.SetActive(true);
             LocalizationSettings.SelectedLocale.SortOrder = 2;
             YandexGame.savesData.selectedLanguage = 2;
+            isLanguageSelected = true;
             LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[2];
         }
-        else if (YandexGame.EnvironmentData.language == "fr")
+        if (YandexGame.EnvironmentData.language == "fr")
         {
             FrBotton.SetActive(true);
             YandexGame.savesData.selectedLanguage = 3;
             LocalizationSettings.SelectedLocale.SortOrder = 3;
+            isLanguageSelected = true;
             LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[3];
         }
-        else
+        if (isLanguageSelected == false)
         {
             EnBotton.SetActive(true);
             YandexGame.savesData.selectedLanguage = 0;
