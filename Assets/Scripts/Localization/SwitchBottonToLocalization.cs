@@ -14,7 +14,7 @@ public class SwitchBottonToLocalization : MonoBehaviour
     void Start()
     {
         //YandexGame.savesData.selectedLanguage = LocalizationSettings.SelectedLocale.SortOrder;
-        
+
         /*
         //   Debug.Log("LocalizationSettings.SelectedLocale" + LocalizationSettings.SelectedLocale);
         switch (YandexGame.savesData.selectedLanguage)
@@ -35,8 +35,8 @@ public class SwitchBottonToLocalization : MonoBehaviour
         */
 
 
-        
-        while(YandexGame.SDKEnabled != true)
+
+        /*
 
         if(YandexGame.EnvironmentData.language == "ru" ||
             YandexGame.EnvironmentData.language == "be" ||
@@ -76,8 +76,38 @@ public class SwitchBottonToLocalization : MonoBehaviour
         }
 
         YandexGame.SaveProgress();
+        */
 
+
+      
+
+        Debug.Log("LocalizationSettings.SelectedLocale" + LocalizationSettings.SelectedLocale);
+        Debug.Log("LocalizationSettings.SelectedLocale.SortOrder" + LocalizationSettings.SelectedLocale.SortOrder);
+       // string lang = LocalizationSettings.SelectedLocale.ToString();
+        switch (LocalizationSettings.SelectedLocale.ToString())
+        {
+            case "English (en)":
+                EnBotton.SetActive(true);
+                break;
+            case "Russian (ru)":
+                RuBotton.SetActive(true);
+                break;
+            case "Spanish (es)":
+                EsBotton.SetActive(true);
+                break;
+            case "French (fr)":
+                FrBotton.SetActive(true);
+                break;
+            case null:
+                RuBotton.SetActive(true);
+                break;
+        }
     }
 
-
+    /*
+    private void Update()
+    {
+        Debug.Log(LocalizationSettings.SelectedLocale.ToString());
+    }
+    */
 }
