@@ -54,6 +54,8 @@ MonoBehaviour:
   buttonOn: {fileID: 0}
   buttonOff: {fileID: 6700677939644450382}
   timeOfWait: 4
+  MobileText: {fileID: 6700677940178854061}
+  PcText: {fileID: 6700677940787028241}
 --- !u!1 &6700677940062544815
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +192,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6700677940178854058
 RectTransform:
   m_ObjectHideFlags: 0
@@ -348,7 +350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6700677940787028238
 RectTransform:
   m_ObjectHideFlags: 0
