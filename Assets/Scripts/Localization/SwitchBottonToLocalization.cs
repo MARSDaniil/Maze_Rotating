@@ -9,9 +9,8 @@ public class SwitchBottonToLocalization : MonoBehaviour
     public GameObject RuBotton;
     public GameObject EsBotton;
     public GameObject FrBotton;
-     
-    private bool isLanguageSelected = false;
-    void Start()
+
+    void Awake()
     {
         //YandexGame.savesData.selectedLanguage = LocalizationSettings.SelectedLocale.SortOrder;
 
