@@ -1,7 +1,9 @@
 #         Maze Rotating
 
 [Ссылка на рабочую версию на платформе YandexGame.](https://yandex.ru/games/app/223428?lang=ru)
+
 [Ссылка на рабочую версию на платформе UnityPlay.](https://play.unity.com/mg/other/testbuild_0_0_1)
+
 ![Уровень 5](/README_Additional_materials/ezgif.com-optimize.gif) 
 
 Это аркадная головоломка с процедурно генерируюемым лабиринтом и увеличением размера лабиринта с каждым уровнем, с целью повышения сложности прохождения.

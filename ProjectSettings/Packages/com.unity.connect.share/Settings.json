@@ -1,0 +1,26 @@
+{
+    "m_Dictionary": {
+        "m_DictionaryValues": [
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "createDefaultBuildsFolder",
+                "value": "{\"m_Value\":true}"
+            },
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "firstTime",
+                "value": "{\"m_Value\":false}"
+            },
+            {
+                "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "autoPublish",
+                "value": "{\"m_Value\":true}"
+            },
+            {
+                "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+                "key": "buildOutputDirList",
+                "value": "{\"m_Value\":\"D:/Даниил/Rotating Maze/Builds/testBuild_0_2_4_start_add;D:/Даниил/Rotating Maze/Builds/testBuild_0_2_3_delete_Lang_1;D:/Даниил/Rotating Maze/Builds/testBuild_0_2_3_delete_Lang_0;D:/Даниил/Rotating Maze/Builds/testBuild_0_2_2_new_setting_5;D:/Даниил/Rotating Maze/Builds/testBuild_0_2_2_new_setting_4;D:/Даниил/Rotating Maze/Builds/testBuild_0_2_2_new_setting_3;D:/Даниил/Rotating Maze/Builds/testBuild_0_2_2_new_setting_2;D:/Даниил/Rotating Maze/Builds/testBuild_0_2_2_new_setting;D:/Даниил/Rotating Maze/Builds/testBuild_0_2_1_forth_push_2;D:/Даниил/Rotating Maze/Builds/testBuild_0_2_1_forth_push_1\"}"
+            }
+        ]
+    }
+}
